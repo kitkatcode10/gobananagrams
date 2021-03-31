@@ -1,4 +1,8 @@
-// Psudocode for Go Bananas: Bananagrams Variant Game, the overall game play
+// Planning Requirements for Project 1: 
+
+// Game: Go Bananas - Bananagrams Variant 
+// Wireframe: https://www.figma.com/file/FhMYpb0YJYNmBtmYzISZP3/SEI-Project-1-Bananagrams-Game?node-id=3%3A154
+// Psudocode overall game play (below): 
 
 // 1. Define required constants: 
 //     1.1) Define a player (do i need this? it's a 1 player game)
@@ -27,6 +31,7 @@
 //         5.2.2) Present the words entered 
 //         5.2.3) Loop through the letter array for the set so that once a letter is used, the letter can not be used again
 //         5.2.4) Loop through the words array? or the words captured to make sure its not the same word... do not accept word if it's already been used
+        // 5.2.5) Display a message that the word is not accepted as it does not use the tiles or is not a real word, or is not 2+ letters 
 
 // 6. Handle a player clicking the "more bananas" for next round: 
 //     6.1) Give player a new set of 10 randomized tiles 
