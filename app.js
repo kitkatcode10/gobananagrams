@@ -32,7 +32,7 @@ const displayMsg = (message) => alert(message);
 const tilesContainerElement = (string) => (document.getElementById('letter-tiles-container').innerHTML = string); 
 
 // Event Handlers 
-
+  - > make handler to deal with enter 
 const handlePlayerInput = (evt) => {
 
     let userInput = ''; 
