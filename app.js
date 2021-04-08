@@ -1,43 +1,26 @@
-// Plan: 
-// initiatlize Game
-    // show first scrambled word's letters 
-    // load the input field for user to type into 
-
-// Game Logic Structure 
-// wait for a user to click start 
-// Wait for a user to type a word  > Set up event listeners 
-// check that the letters used are in the array of letters shown 
-// let the user know if the word is accepted (if it used the letters; display an alert) 
-    // Accepted: show an accepted message and update the letters available that have not been used / can not make same word 
-    // Not Accepted: show message to try another word
-    // Not Accepted: used letter outside of tiles?
-
-// Game Variables
 
 let wins = 0; 
 let attempts = 0; 
-let round = 0;
+let round = 3;
 let wordsMadeCount = 0; 
 let wordsMade = []; 
 let scrambledLetters = [];
-let words = ["baseball", "birch", "apple", "yellow", "sea"];
+let words = ["baseball", "birch", "apple"];
 let randomIndex;
 
-// Generate a scramble of letters of the first word in round 1
-
-const word1 = 'baseball'.split('');
+var word1 = 'baseball'.split(''),
+        n = word1.length; 
 
 function scramble() {
 
-    for (let i=0; i < word1.length; i++) {
-        randomIndex = Math.floor(Math.random() * word1.length)
-        const scrambledLetter = word1[randomIndex]
-        scrambledLetters.push(scrambledLetter)
+    for (let i = n - 1; i > 0; i --) {
+        var randomIndex = Math.floor(Math.random() * (i + 1));
+        var scrambledLetters = word1[i];
+        word1[i] = word1[randomIndex];
+        word1[randomIndex] = scrambledLetters; 
     }
     return scrambledLetters
 }
-
-console.log("scramble=",scramble())
 
 const wordsMadeCountElement = () => (document.getElementById('words-made-count').innerHTML = wordsMadeCount); 
 const wordsMadeElement = () => (document.getElementById('words-made').innerHTML = wordsMade); 
@@ -48,56 +31,75 @@ const displayMsg = (message) => alert(message);
 
 const tilesContainerElement = (string) => (document.getElementById('letter-tiles-container').innerHTML = string); 
 
-// initialize the game, set up each round... 
-// keep track of how many rounds, the winning condition for each round 
-
-
 // Event Handlers 
 
-// const handlePlayerInput = (evt) => 
-// when the user types a word into their keyboard
-// capture their number of tries
-// then check if their guess is correct 
-// no, can they still keep guessing? or do they need to move on
-// win or lose, update the correct state value and move to the next round OR reset the game
+const handlePlayerInput = (evt) => {
 
+    let userInput = ''; 
 
-// let userInput = ''; 
+    if (evt.type === 'input' && evt.target.value) {
+        userInput = evt.target.value.toLowerCase();
+    } else if (evt.type === 'keyup') {  
+        userInput = evt.type.toLowerCase();
+    } else {
+        return; 
+    }
 
-
-
-// checkforValidTurn(userInput);
-// checkforWinCondition(userInput); 
+    checkforValidTurn(userInput);
+    checkforWinCondition(userInput);
+};
 
 // // Event Listeners
 
-// document.addEventListener('keypress', handlePlayerInput)
-// document.getElementById('letter-tiles-container').addEventListener('click', handlePlayerInput); 
+document.addEventListener('keypress', handlePlayerInput)
+document.getElementById('letter-tiles-container').addEventListener('click', handlePlayerInput); 
 
 // // Utility Functions 
 
-// const checkWinCondition = (userInput) => {
-//     if (scrambledWord === userInput) {
-//         attempts += 1; 
-//         displayMsg("Go Bananas, great job!");
-//         initGame(); 
-//     } else if (guessesLeft === 0) {
-//         displayMsg ("Oh Bananas, try again.")
-//         attempts += 1; 
-//         initGame();         
-//     }
-// }; 
+const checkWinCondition = (userInput) => {
+    if (scrambledWord === userInput) {
+        attempts += 1; 
+        displayMsg("Go Bananas, great job!");
+        initGame(); 
+    } else if (scrambledWord !== userInput) {
+        displayMsg ("Oh Bananas, try again.")
+        attempts += 1; 
+        initGame();         
+    }
+}; 
+
+const takeTurn = (userInput) => {
+    wordsMadeCount += 1; 
+    wordsMadeElement(); 
+    wordsMadeCountElement(); 
+}; 
+
+const checkforValidTurn = (userInput) => {
+    if(!word1.includes(userInput)) {
+        displayMsg("You can only use the letters that are scrambled, try again!");
+    } else if (userInput.includes(userInput)) {
+       displayMsg("Awe, you already tried that word!")
+    } else {
+        takeTurn(userChoice);
+    }
+    };
 
 const generateLetterTilesString = () => {
     let letterTiles = ''; 
     word1.forEach(function (tile) {
-        letterTiles += `<button type="button" class="btn btn-outline-info">${tile}</button>`;
+        letterTiles += `<button type="button" class="btn btn-warning">${tile}</button>`;
     }); 
 
     return letterTiles;
 };
 
+const word2 = 'birch'.split('');
+
+const word3 = 'apple'.split('');
+
+
 const initGame = () => {
+
     wordsMadeCountElement();
     wordsMadeElement(); 
     winsElement();
@@ -110,7 +112,5 @@ const initGame = () => {
 // Start Game
 
 initGame(); 
-
-
 
 

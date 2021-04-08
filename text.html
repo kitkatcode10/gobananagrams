@@ -40,37 +40,40 @@
         <!-- Intro Message & letters -->
         <div class="row">
         <div class="col-lg-12">
-            <p class="intro-text align-left">
+            <p class="intro text-center">
                 Remember! <br>
-                1. It must be a real word in the dictionary <br>
-                2. A word is 2 or more letters <br>
-                3. You’ll have 10 tiles at a time <br>
-                4. You can’t repeat the same word <br>
-                5. Type your words into the banana basket and press enter <br>
-                6. See how many words you can make in 3 rounds! 
+                1. Try to unscramble the letters to determine the banagram. <br>
+                2. A word is 2 or more letters. <br>
+                3. You can’t repeat the same word. <br>
+                4. Type your words into the banana basket and press enter. <br>
+                5. See if you can get all 3 rounds of bananagrams! 
             </p>
         </div>
 
         <!-- Letter Tiles -->
         <div class="col-lg-12 text-center" id="letter-tiles-container"></div>
         <br>
-        <h3 class="lead text-center">To flip the tiles, click Peel!</p> 
-        <br>
-        <a class="lead text-center"></a>
-        <a class="btn btn-dark btn-lg center" href="#" role="button">Peel!</a>
-
+    
         </div>
 
         <!-- Word Input Field for player "Banana Basket" -->
-        <div class="row">
+        <div class="center">
             <div class="col-lg-6 text-center"> Banana Basket: <span id="user-wordinputs"></span></div>
         </div>
-   
-        <input class="col-lg-6 text-center"> </input>
-
+        
+        <input class="col-lg-8 text-center"> </input>
+        
+        <!-- Next Round Button -->
+        <h3 class="lead text-center">Give me more Bananas!</p> 
+        <a class="lead text-center"></a>
+        <a class="btn btn-dark btn-lg center" href="#" role="button">More!</a>
+    
+        <br>
+        <br>
+        
         <!-- Collective Words Tracker: Words & Count -->
         <div class="row">
-            <div class="col-lg-4 text-center"> Words You Made:  <span id="words-made"></span></div>
+            <div class="col-lg-4 text-center"> Words You Made: <span id="words-made"></span></div>
             <div class="col-lg-4 text-center"> # of Words Peeled: <span id="words-made-count"></span></div>
             <div class="col-lg-4 text-center"> Banan-Attempts: <span id="attempts"></span></div>
             <div class="col-lg-4 text-center"> Wins: <span id="wins"></span></div>

@@ -2,3 +2,11 @@ h1, body {
     font-family: 'Yrsa', serif;
 
 }
+
+.center {
+    align-items: center;
+}
+
+button{
+    margin: 13px;
+  }
