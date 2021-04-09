@@ -10,3 +10,7 @@ h1, body {
 button{
     margin: 13px;
   }
+
+.jumbotron {
+      background-image: url('Banana\ Background.jpg');
+    } 
