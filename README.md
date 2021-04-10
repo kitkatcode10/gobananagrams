@@ -1,17 +1,18 @@
-Go Bananas! 
+Banana Scramble
 
-Welcome to Go Bananas! I'm so excited you've discovered a Bananagrams variant, and no it's not a variant like a bad banana. It's just a play on words (I hope). Bananagrams and word games like Scrabble are my favourite type of board game, and I didn't want to re-create Bananagrams, so instead let's Go Bananas! 
+Welcome to Go Bananas! I'm so excited you've discovered a Bananagrams variant, and no it's not a variant like a bad banana. It's just a play on words (I hope). Bananagrams and word games like Scrabble are my favourite type of board game, so now we can blend them together and play banana scramble. BTW, all puns and play on words are in fact, intended.  
 
 Please note, this is my first go at developing a word game, we're starting off small with pre-defined parameters, you can learn more about how we can take the game to the next level in the next steps section. 
 
 Game Instructions and Play: 
-In 3 rounds, you will be provided 10 random tiles to make as many words as you can. Ideally words in the Merrian Webster Dictionary, but if your word exists in Urban Dictionary, I'll let it slip (*pun intended). 
+In 3 different rounds, you will be provided a handful of tiles that make up ONE single scrambled word (bananagram). To win the round, you have to unscramble the word using all the letters available by typing it into the banana basket. Just a few tips... the words are in the Merrian Webster Dictionary and are obviously banana themed! 
 
-Accepted words are words of 2 and more letters and you can not use the same words. You'll be able to see the words you've created in your banana basket.
+We'll keep track of your "Banan-attempts" and the words you've already made. 
 
-[insert game screenshots]
+[Game Screenshot]
+![Screenshot](Game Screenshot.jpg)
 
-Technologies Used: HTML, JavaScript, jQuery, CSS 
+Technologies Used: HTML, JavaScript, CSS 
 
 Getting Started: 
 0. Start brushing up on your vocabulary and think of fun, new, big or small words that are a part of your vernacular. 
@@ -22,11 +23,10 @@ Getting Started:
 5. Have Fun! 
 
 Next Steps: 
-
-Blending Bananagrams and Scrabble together, available letters will be pre-defined by the amount of and the count of letters available in a Bananagram bag (instead of random draw), and each letter will have a corresponding score. For example letters Q and Z are worth 10 points while A and E are worth 1. 
+Make it iterate through each round, so we can play the next word. 
 
 Nice to have stretch goal:
-The ultimate stretch goal is to trade in a letter you do not want to use in the 10 tiles you have in front of you. Trade in a tile, and you'll have to pick up 3 tiles in return. 
+Add in a library that has a wide variety of words to use as part of scrambled words. 
 
 UI stretch goal:
-Drag and Drop vs Type into textbox 
+Drag and Drop vs Type into field to enter the word 

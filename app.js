@@ -1,33 +1,33 @@
 
-let wins = 0; 
 let attempts = 0; 
-let round = 0;
+let round = 3;
 let wordsMadeCount = 0; 
 let wordsMade = []; 
-let scrambledLetters = [];
 let words = ["baseball", "birch", "apple"];
-let randomIndex;
+let scrambledWord;
 
-var word1 = 'baseball'.split(''),
+const word1 = 'baseball'.split(''),
         n = word1.length; 
 
 function scramble() {
 
     for (let i = n - 1; i > 0; i --) {
-        var randomIndex = Math.floor(Math.random() * (i + 1));
-        var scrambledLetters = word1[i];
-        word1[i] = word1[randomIndex];
-        word1[randomIndex] = scrambledLetters; 
+        const scrambledWord = Math.floor(Math.random() * (i + 1));
+        const scrambledLetters = word1[i];
+        word1[i] = word1[scrambledWord];
+        word1[scrambledWord] = scrambledLetters; 
     }
     return word1.join("");
 }
+
 console.log(scramble())
 
-const wordsMadeCountElement = () => (document.getElementById('words-made-count').innerHTML = wordsMadeCount); 
-const wordsMadeElement = () => (document.getElementById('words-made').innerHTML = wordsMade); 
-const winsElement = () => (document.getElementById('wins').innerHTML = wins);
+
+// const bananaBasketElement = () => (document.getElementById('banana-basket-input').innerHTML = bananaBasketInput); 
 const attemptsElement = () => (document.getElementById('attempts').innerHTML = attempts);
 const roundsElement = () => (document.getElementById('rounds').innerHTML = round);
+const wordsMadeCountElement = () => (document.getElementById('words-made-count').innerHTML = wordsMadeCount); 
+const wordsMadeElement = () => (document.getElementById('words-made').innerHTML = wordsMade); 
 const displayMsg = (message) => alert(message); 
 
 const tilesContainerElement = (string) => (document.getElementById('letter-tiles-container').innerHTML = string); 
@@ -38,7 +38,7 @@ const handlePlayerInput = (evt) => {
 
     let userInput = ''; 
 
-    if (evt.type === 'input' && evt.target.value) {
+    if (evt.type === 'click' && evt.target.value) {
         userInput = evt.target.value.toLowerCase();
     } else if (evt.type === 'keypress') {  
         userInput = evt.key.toLowerCase();
@@ -50,22 +50,31 @@ const handlePlayerInput = (evt) => {
     checkWinCondition(userInput);
 };
 
+document.addEventListener('keypress', handlePlayerInput);
+document.getElementById('letter-tiles-container').addEventListener('click', handlePlayerInput);
+// document.getElementById('banana-basket-input').addEventListener('keypress', function (e) {
+//     if (e.key === 'Enter') {
+//     }
+// });
+
 // // Event Listeners
 
-// document.querySelector('#txtSearch').addEventListener('keypress', function (e) {
+// input.querySelector('#txtSearch').addEventListener('keypress', function (e) {
 //     if (e.key === 'Enter') {
 //     }
 // }); 
-document.getElementById('letter-tiles-container').addEventListener('input', handlePlayerInput); 
+// document.getElementById('letter-tiles-container').addEventListener('input', handlePlayerInput); 
+
+// inputelement.addEventListener('keypress' , handlePlayerInput)
 
 // // Utility Functions 
 
 const checkWinCondition = (userInput) => {
-    if (scrambledWord === userInput) {
+    if (word1 === userInput) {
         wins += 1; 
         displayMsg("Go Bananas, great job!");
         initGame(); 
-    } else if (scrambledWord !== userInput) {
+    } else if (word1 !== userInput) {
         displayMsg ("Oh Bananas, try again.")
         attempts += 1; 
         initGame();         
@@ -99,13 +108,15 @@ const generateLetterTilesString = () => {
     return letterTiles;
 };
 
+// const computerRandom = () => scrambleWord = scrambledLetters
+
 const initGame = () => {
 
     // generate a scrambled word 
-
+    
+    // bananaBasketElement(); 
     wordsMadeCountElement();
     wordsMadeElement(); 
-    winsElement();
     attemptsElement();
     roundsElement();
     tilesContainerElement(generateLetterTilesString());
