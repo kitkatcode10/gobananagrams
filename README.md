@@ -17,7 +17,7 @@ Technologies Used: HTML, JavaScript, CSS
 
 ## :banana: Getting Started: 
 0. Start brushing up on your vocabulary and think of fun, new, big or small words that are a part of your vernacular. 
-1. Click here to deploy Go Bananas
+1. Click here [here](https://kitkatcode10.github.io/gobananagrams/#) to deploy Go Bananas
 2. Click start to begin 
 3. Make words
 4. Don't worry, you can play as many times as you want!
