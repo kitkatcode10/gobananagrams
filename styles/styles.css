@@ -1,16 +1,20 @@
 h1, body {
     font-family: 'Yrsa', serif;
-
-} 
+}
 
 .center {
     align-items: center;
+} 
+
+button {
+    margin: 13px;
 }
 
-input {
-    margin: 13px;
-  }
+body {
+    background-color: salmon; 
+}
 
 .jumbotron {
-      background-image: url('Banana\ Background.jpg');
-    } 
+   width: 70%;  
+   background-image: url(raining_bananas.gif); 
+}
