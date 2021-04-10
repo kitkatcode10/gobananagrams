@@ -1,4 +1,4 @@
-Banana Scramble
+#H1 Banana Scramble
 
 Welcome to Go Bananas! I'm so excited you've discovered a Bananagrams variant, and no it's not a variant like a bad banana. It's just a play on words (I hope). Bananagrams and word games like Scrabble are my favourite type of board game, so now we can blend them together and play banana scramble. BTW, all puns and play on words are in fact, intended.  
 
@@ -9,13 +9,13 @@ In 3 different rounds, you will be provided a handful of tiles that make up ONE 
 
 We'll keep track of your "Banan-attempts" and the words you've already made. 
 
-[Game Screenshot]
-![Screenshot](C:\Users\Kat Wong\documents\General Assembly\Projects\Proj1\Game Screenshot.JPG)
+#H2 [Game Screenshot]
+![alt text](C:\Users\Kat Wong\documents\General Assembly\Projects\Proj1\Game Screenshot.JPG)
 
 
 Technologies Used: HTML, JavaScript, CSS 
 
-Getting Started: 
+#H2 Getting Started: 
 0. Start brushing up on your vocabulary and think of fun, new, big or small words that are a part of your vernacular. 
 1. Click here to deploy Go Bananas
 2. Click start to begin 
@@ -23,7 +23,7 @@ Getting Started:
 4. Don't worry, you can play as many times as you want!
 5. Have Fun! 
 
-Next Steps: 
+#H2 Next Steps: 
 Make it iterate through each round, so we can play the next word. 
 
 Nice to have stretch goal: 
