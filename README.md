@@ -1,4 +1,4 @@
-# Banana Scramble
+# :banana::banana::banana: Banana Scramble :banana::banana::banana:
 
 Welcome to Go Bananas! I'm so excited you've discovered a Bananagrams variant, and no it's not a variant like a bad banana. It's just a play on words (I hope). Bananagrams and word games like Scrabble are my favourite type of board game, so now we can blend them together and play banana scramble. BTW, all puns and play on words are in fact, intended.  
 
