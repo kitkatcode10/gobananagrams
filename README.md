@@ -9,7 +9,7 @@ In 3 different rounds, you will be provided a handful of tiles that make up ONE 
 
 We'll keep track of your "Banan-attempts" and the words you've already made. 
 
-## :banana: [Game Screenshot]
+## :banana: Game Screenshot
 ![alt text](https://github.com/kitkatcode10/gobananagrams/blob/main/assets/Game%20Screenshot.JPG?raw=true)
 
 
@@ -31,3 +31,7 @@ Add in a library that has a wide variety of words to use as part of scrambled wo
 
 ##### UI stretch goal:
 Drag and Drop vs Type into field to enter the word 
+
+## :banana: Other Notes: 
+[Mockup link] (https://www.figma.com/file/FhMYpb0YJYNmBtmYzISZP3/SEI-Project-%231%3A-Bananagrams-Game?node-id=0%3A1)
+
