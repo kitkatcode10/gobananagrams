@@ -10,7 +10,7 @@ In 3 different rounds, you will be provided a handful of tiles that make up ONE 
 We'll keep track of your "Banan-attempts" and the words you've already made. 
 
 ## :banana: [Game Screenshot]
-![alt text](C:\Users\Kat Wong\documents\General Assembly\Projects\Proj1\Game Screenshot.JPG)
+![alt text](https://github.com/kitkatcode10/gobananagrams/blob/main/assets/Game%20Screenshot.JPG?raw=true)
 
 
 Technologies Used: HTML, JavaScript, CSS 
