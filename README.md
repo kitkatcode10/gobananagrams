@@ -4,18 +4,18 @@ Welcome to Go Bananas! I'm so excited you've discovered a Bananagrams variant, a
 
 Please note, this is my first go at developing a word game, we're starting off small with pre-defined parameters, you can learn more about how we can take the game to the next level in the next steps section. 
 
-##### Game Instructions and Play: 
+## :banana: Game Instructions and Play: 
 In 3 different rounds, you will be provided a handful of tiles that make up ONE single scrambled word (bananagram). To win the round, you have to unscramble the word using all the letters available by typing it into the banana basket. Just a few tips... the words are in the Merrian Webster Dictionary and are obviously banana themed! 
 
 We'll keep track of your "Banan-attempts" and the words you've already made. 
 
-## [Game Screenshot]
+## :banana: [Game Screenshot]
 ![alt text](C:\Users\Kat Wong\documents\General Assembly\Projects\Proj1\Game Screenshot.JPG)
 
 
 Technologies Used: HTML, JavaScript, CSS 
 
-## Getting Started: 
+## :banana: Getting Started: 
 0. Start brushing up on your vocabulary and think of fun, new, big or small words that are a part of your vernacular. 
 1. Click here to deploy Go Bananas
 2. Click start to begin 
@@ -23,7 +23,7 @@ Technologies Used: HTML, JavaScript, CSS
 4. Don't worry, you can play as many times as you want!
 5. Have Fun! 
 
-## Next Steps: 
+## :banana: Next Steps: 
 Make it iterate through each round, so we can play the next word. 
 
 ##### Nice to have stretch goal: 
