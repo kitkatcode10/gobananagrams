@@ -1,4 +1,16 @@
 h1, body {
     font-family: 'Yrsa', serif;
 
+} 
+
+.center {
+    align-items: center;
 }
+
+input {
+    margin: 13px;
+  }
+
+.jumbotron {
+      background-image: url('Banana\ Background.jpg');
+    } 
