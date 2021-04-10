@@ -96,6 +96,8 @@ const bananagramWord = function scramble() {
  return word1.join("");
 }
 
+console.log("scramble=", scramble())
+
 const initGame = () => {
 
     bananagramWord();
